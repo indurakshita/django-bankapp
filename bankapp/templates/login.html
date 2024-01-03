@@ -1,0 +1,14 @@
+<!-- bankapp/templates/login.html -->
+{% extends 'base.html' %}
+
+{% block title %}Login - My Bank App{% endblock %}
+
+{% block content %}
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <a href="{% url 'signup' %}">Don't have an account? Signup here.</a>
+{% endblock %}

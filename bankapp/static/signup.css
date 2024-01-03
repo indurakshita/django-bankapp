@@ -1,0 +1,44 @@
+/* static/css/styles.css */
+
+/* Center the form on the page */
+.form-style h2{
+    text-align: center;
+}
+
+.center-text {
+    text-align: center;
+}
+
+form.signup-form {
+    max-width: 300px;
+    margin: auto;
+}
+
+
+form.signup-form input[type="text"],
+form.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    display: block;  
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Style the form button */
+form.signup-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Style error messages */
+form.signup-form p.error-message {
+    color: red;
+}
+
+

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Account Detail
+{% endblock title %}
+   
+{% block content %}
+    <h2>Account Detail</h2>
+    <p>User: {{ account.user.username }}</p>
+    <p>Account Number: {{ account.account_number }}</p>
+    <p>Balance: {{ account.balance }}</p>
+
+    <h3>Transaction History</h3>
+    <ul>
+        {% for transaction in transactions %}
+            <li>{{ transaction.transaction_type }} - {{ transaction.amount }} - {{ transaction.timestamp }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'perform_transaction' %}">Perform a Transaction</a>
+    {% endblock content %}
